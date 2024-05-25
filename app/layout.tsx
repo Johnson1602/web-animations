@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import { Header } from '@/components'
+import './globals.scss'
 
 export const metadata: Metadata = {
   title: 'Web animations',
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }

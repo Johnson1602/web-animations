@@ -1,3 +1,7 @@
 export default function Home() {
-  return <main>Web Animations</main>
+  return (
+    <main>
+      <h1>Welcome!</h1>
+    </main>
+  )
 }
