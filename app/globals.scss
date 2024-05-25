@@ -11,7 +11,21 @@ body {
   overflow-x: hidden;
 }
 
+li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }

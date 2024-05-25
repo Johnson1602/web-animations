@@ -1,0 +1,23 @@
+.demo__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-button {
+  padding: 10px 20px;
+  color: #191919;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+
+  &.demo-button--primary {
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 20px;
+  }
+}
+
+.demo-div {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+}

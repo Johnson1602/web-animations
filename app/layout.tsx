@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Header } from '@/components'
 import './globals.scss'
+import './demo.scss'
 
 export const metadata: Metadata = {
   title: 'Web animations',
