@@ -44,7 +44,7 @@ export default function BasicsPage() {
               scale: isAnimate ? 1.5 : 1,
             }}
           >
-            I'm a button
+            Button
           </motion.button>
         ) : (
           <motion.button
@@ -63,7 +63,7 @@ export default function BasicsPage() {
               repeatType: 'reverse',
             }}
           >
-            I'm a button
+            Button
           </motion.button>
         )}
       </DemoWrapper>
