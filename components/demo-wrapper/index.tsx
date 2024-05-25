@@ -1,9 +1,21 @@
+import classNames from 'classnames'
 import './index.scss'
 
-export function DemoWrapper({
-  children,
-}: Readonly<{
+interface DemoWrapperProps {
+  className?: string
   children: React.ReactNode
-}>): JSX.Element {
-  return <div className='demo-wrapper'>{children}</div>
+}
+
+export function DemoWrapper(props: DemoWrapperProps): JSX.Element {
+  const { className, children } = props
+
+  return (
+    <div
+      className={classNames('demo-wrapper', {
+        [`${className}`]: !!className,
+      })}
+    >
+      {children}
+    </div>
+  )
 }

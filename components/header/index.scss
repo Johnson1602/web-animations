@@ -1,5 +1,8 @@
 .site-header {
-  background-color: #333;
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 1rem;
   color: #fff;
-  padding: 1rem;
+  background-color: #333;
 }

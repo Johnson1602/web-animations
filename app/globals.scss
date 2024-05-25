@@ -18,6 +18,8 @@ li {
 body {
   display: flex;
   flex-direction: column;
+
+  --header-height: 50px;
 }
 
 a {
@@ -26,6 +28,7 @@ a {
 }
 
 button {
+  padding: 0.5rem;
   border: none;
   cursor: pointer;
 }

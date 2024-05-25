@@ -44,3 +44,55 @@
   height: 100px;
   background-color: #ccc;
 }
+
+.demo-wrapper.demo-layout__wrapper {
+  justify-content: space-evenly;
+}
+
+.demo-full-screen__wrapper {
+  height: 50px;
+}
+
+.demo-full-screen {
+  background-color: #eee;
+  z-index: 2;
+}
+
+.demo-change-justify__wrapper {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.demo-change-justify__ball-container {
+  display: flex;
+  width: 300px;
+}
+
+.demo-change-justify__ball {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #ccc;
+}
+
+.demo-highlight__list {
+  display: flex;
+}
+
+.demo-highlight__item {
+  position: relative;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.demo-highlight__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  z-index: -1;
+}
