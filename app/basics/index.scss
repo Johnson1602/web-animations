@@ -1,0 +1,52 @@
+.demo-basics {
+  .manuel-control__wrapper {
+    align-self: stretch;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-items: start;
+    align-items: center;
+    gap: 1rem;
+    height: 50px;
+    padding: 0 1rem;
+
+    * {
+      cursor: pointer;
+    }
+  }
+
+  .manuel-control__checkbox {
+    display: none;
+  }
+
+  .manuel-control__label {
+    margin-inline-start: 0.3rem;
+  }
+
+  .manuel-control__switch {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 68px;
+    height: 36px;
+    padding: 0 3px;
+    border-radius: 18px;
+
+    &--on {
+      justify-content: flex-end;
+    }
+  }
+
+  .manuel-control__switch-handle {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #fff;
+  }
+
+  .manuel-control__button {
+    &:hover {
+      background-color: #bbb;
+    }
+  }
+}

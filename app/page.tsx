@@ -17,6 +17,10 @@ const ROUTE = [
     path: '/layout',
     label: 'Layout',
   },
+  {
+    path: '/layout/modal',
+    label: 'Modal',
+  },
 ]
 
 export default function Home() {
