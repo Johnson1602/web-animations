@@ -15,6 +15,12 @@ const BUTTON_STATES = {
 
 type ButtonState = keyof typeof BUTTON_STATES
 
+const VARIANTS = {
+  VISIBLE: { opacity: 1, scale: 1 },
+  HIDDEN_SMALL: { opacity: 0, scale: 0.5 },
+  HIDDEN_LARGE: { opacity: 0, scale: 1.5 },
+}
+
 export default function SubscribeButtonPage() {
   const [buttonState, setButtonState] = useState<ButtonState>('IDLE')
 
@@ -46,9 +52,10 @@ export default function SubscribeButtonPage() {
             <motion.span
               key={buttonState}
               className='subscribe-button__content'
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.5 }}
+              variants={VARIANTS}
+              initial={VARIANTS.HIDDEN_SMALL}
+              animate={VARIANTS.VISIBLE}
+              exit={VARIANTS.HIDDEN_SMALL}
               transition={{
                 type: 'spring',
                 duration: 0.4,
@@ -60,9 +67,10 @@ export default function SubscribeButtonPage() {
             <motion.span
               key={buttonState}
               className='subscribe-button__content'
-              initial={{ opacity: 0, scale: 1.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.5 }}
+              variants={VARIANTS}
+              initial={VARIANTS.HIDDEN_LARGE}
+              animate={VARIANTS.VISIBLE}
+              exit={VARIANTS.HIDDEN_SMALL}
               transition={{
                 type: 'spring',
                 duration: 0.3,

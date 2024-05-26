@@ -25,6 +25,10 @@ const ROUTE = [
     path: '/subscribe-button',
     label: 'Subscribe Button',
   },
+  {
+    path: '/dynamic-height',
+    label: 'Dynamic Height',
+  },
 ]
 
 export default function Home() {

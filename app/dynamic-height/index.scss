@@ -1,0 +1,19 @@
+.demo-wrapper.demo-dynamic-height {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4rem;
+
+  .card__wrapper {
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .card {
+    display: grid;
+    gap: 1rem;
+    max-width: 350px;
+    padding: 1.5rem;
+    line-height: 1.3;
+  }
+}
