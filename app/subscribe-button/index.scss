@@ -1,8 +1,5 @@
 .demo-subscribe-button {
   .subscribe-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 150px;
     height: 40px;
     background-color: #191919;
@@ -14,5 +11,13 @@
       background-color: #191919;
       cursor: not-allowed;
     }
+  }
+
+  .subscribe-button__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
   }
 }

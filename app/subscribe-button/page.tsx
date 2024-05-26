@@ -8,7 +8,7 @@ import './index.scss'
 
 const BUTTON_STATES = {
   IDLE: 'Subscribe',
-  LOADING: <Spinner size={16} color='#fff' />,
+  LOADING: <Spinner size={18} color='#fff' />,
   SUCCESS: `You're in! 🎉`,
   ERROR: 'Oops! Try again.',
 } as const
@@ -45,6 +45,7 @@ export default function SubscribeButtonPage() {
           {buttonState === 'IDLE' ? (
             <motion.span
               key={buttonState}
+              className='subscribe-button__content'
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.5 }}
@@ -58,6 +59,7 @@ export default function SubscribeButtonPage() {
           ) : (
             <motion.span
               key={buttonState}
+              className='subscribe-button__content'
               initial={{ opacity: 0, scale: 1.5 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.5 }}
