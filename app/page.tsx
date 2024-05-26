@@ -21,6 +21,10 @@ const ROUTE = [
     path: '/layout/modal',
     label: 'Modal',
   },
+  {
+    path: '/subscribe-button',
+    label: 'Subscribe Button',
+  },
 ]
 
 export default function Home() {
