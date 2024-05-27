@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useOnClickOutside } from 'usehooks-ts'
+import classNames from 'classnames'
 import { DemoWrapper } from '@/components'
 
 import './index.scss'
@@ -39,10 +40,14 @@ export default function FeedbackPage() {
               name='form-input'
               id='form__input'
               className='form__input'
+              value={feedbackContent}
+              onChange={(e) => setFeedbackContent(e.target.value)}
             />
 
             <motion.span
-              className='form__pseudo-placeholder'
+              className={classNames('form__pseudo-placeholder', {
+                'form__pseudo-placeholder--hide': !!feedbackContent,
+              })}
               layoutId='feedback-placeholder'
             >
               Feedback

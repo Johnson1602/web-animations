@@ -25,6 +25,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    user-select: none;
+
+    &--hide {
+      opacity: 0 !important; // override the inline style set by framer motion
+    }
   }
 
   .form__submit {
