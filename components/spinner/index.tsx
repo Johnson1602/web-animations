@@ -13,8 +13,8 @@ export function Spinner({ color, size = 20 }: SpinnerProps) {
       className={`size-[--spinner-size]`}
       style={
         {
-          ['--spinner-size']: `${size}px`,
-          ['--spinner-color']: color,
+          '--spinner-size': `${size}px`,
+          '--spinner-color': color,
         } as React.CSSProperties
       }
     >
