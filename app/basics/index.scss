@@ -19,10 +19,6 @@
     display: none;
   }
 
-  .manuel-control__label {
-    margin-inline-start: 0.3rem;
-  }
-
   .manuel-control__switch {
     display: flex;
     justify-content: flex-start;
@@ -46,7 +42,15 @@
 
   .manuel-control__button {
     &:hover {
-      background-color: #bbb;
+      background-color: var(--color-neutral-dark);
     }
+  }
+
+  .demo-button {
+    padding: 10px 20px;
+    color: #191919;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    user-select: none;
   }
 }

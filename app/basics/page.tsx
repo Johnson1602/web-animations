@@ -36,9 +36,11 @@ export default function BasicsPage() {
           className={classNames('manuel-control__switch', {
             'manuel-control__switch--on': isManuel,
           })}
-          initial={{ backgroundColor: '#ddd' }}
+          initial={{ backgroundColor: 'var(--color-neutral-dark)' }}
           animate={{
-            backgroundColor: isManuel ? '#007bff' : '#ddd',
+            backgroundColor: isManuel
+              ? 'var(--color-accent-teal)'
+              : 'var(--color-neutral-dark)',
           }}
           onClick={() => {
             if (checkboxRef.current) {
@@ -82,8 +84,12 @@ export default function BasicsPage() {
           <motion.button
             className='demo-button'
             animate={{
-              backgroundColor: isAnimate ? '#ff0080' : '#f0f0f0',
-              color: isAnimate ? '#fff' : '#191919',
+              backgroundColor: isAnimate
+                ? 'var(--color-accent-blue)'
+                : 'var(--color-secondary)',
+              color: isAnimate
+                ? 'var(--color-secondary)'
+                : 'var(--color-primary)',
               scale: isAnimate ? 1.5 : 1,
             }}
           >
@@ -93,8 +99,8 @@ export default function BasicsPage() {
           <motion.button
             className='demo-button'
             animate={{
-              backgroundColor: '#ff0080',
-              color: '#fff',
+              backgroundColor: 'var(--color-accent-blue)',
+              color: 'var(--color-secondary)',
               // rotate: 360,
               scale: 1.5,
             }}

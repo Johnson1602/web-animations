@@ -4,26 +4,28 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { DemoWrapper } from '@/components'
 
+import './index.scss'
+
 const TABS = [
   {
     id: 1,
     name: 'Mobile',
-    backgroundColor: '#ddd',
+    backgroundColor: 'var(--color-neutral-light)',
   },
   {
     id: 2,
     name: 'Wearables',
-    backgroundColor: 'skyblue',
+    backgroundColor: 'var(--color-accent-blue)',
   },
   {
     id: 3,
     name: 'Smart Home',
-    backgroundColor: 'green',
+    backgroundColor: 'var(--color-accent-teal)',
   },
   {
     id: 4,
     name: 'Lifestyle',
-    backgroundColor: 'pink',
+    backgroundColor: 'var(--color-accent-magenta)',
   },
 ]
 
@@ -46,8 +48,9 @@ export default function Example() {
                   position: 'fixed',
                   inset: 0,
                   top: 'var(--header-height)',
+                  borderRadius: 0,
                 }
-              : { height: 50, width: 50 }
+              : { height: 50, width: 50, borderRadius: 8 }
           }
           layout
         />
@@ -63,6 +66,7 @@ export default function Example() {
           <motion.div className='demo-change-justify__ball' layout />
         </div>
         <button
+          className='demo-change-justify__button'
           onClick={() =>
             setJustifyContent(
               justifyContent === 'flex-end' ? 'flex-start' : 'flex-end'

@@ -1,13 +1,13 @@
 .action-button {
   width: 150px;
   height: 40px;
-  background-color: #191919;
+  background-color: var(--color-neutral-light);
   border-radius: 5px;
-  color: #fff;
+  color: var(--color-secondary);
 
   &:disabled {
-    color: #fff;
-    background-color: #191919;
+    color: var(--color-secondary);
+    background-color: var(--color-neutral-light);
     cursor: not-allowed;
   }
 

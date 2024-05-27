@@ -1,0 +1,9 @@
+.demo-wrapper.demo-gestures {
+  .gestures__button {
+    padding: 10px 20px;
+    color: var(--color-secondary);
+    background-color: var(--color-accent-blue);
+    border-radius: 20px;
+    user-select: none;
+  }
+}

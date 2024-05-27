@@ -3,11 +3,13 @@
 import { motion } from 'framer-motion'
 import { DemoWrapper } from '@/components'
 
+import './index.scss'
+
 export default function BasicsPage() {
   return (
-    <DemoWrapper>
+    <DemoWrapper className='demo-keyframes'>
       <motion.div
-        className='demo-div'
+        className='keyframes__box'
         animate={{
           scale: [1, 2, 2, 1, 1],
           rotate: [0, 0, 180, 180, 0],

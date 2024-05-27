@@ -44,7 +44,9 @@ export function ActionButton(props: ActionButtonProps): JSX.Element {
 
   const BUTTON_CONTENT: Record<ButtonState, string | React.ReactNode> = {
     [BUTTON_STATE.IDLE]: initialText,
-    [BUTTON_STATE.LOADING]: <Spinner size={18} color='#fff' />,
+    [BUTTON_STATE.LOADING]: (
+      <Spinner size={18} color='var(--color-secondary)' />
+    ),
     [BUTTON_STATE.SUCCESS]: successText || 'Success',
     [BUTTON_STATE.ERROR]: errorText || 'Error',
   }
