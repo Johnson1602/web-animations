@@ -29,6 +29,10 @@ const ROUTE = [
     path: '/dynamic-height',
     label: 'Dynamic Height',
   },
+  {
+    path: '/feedback',
+    label: 'Feedback',
+  },
 ]
 
 export default function Home() {

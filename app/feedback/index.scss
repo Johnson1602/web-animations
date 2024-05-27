@@ -1,0 +1,34 @@
+.demo-wrapper.demo-feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .feedback__form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 120px;
+    padding: 2px;
+    border: 1px solid #000;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .form__input {
+    display: block;
+    width: 100%;
+    height: 100px;
+  }
+
+  .form__pseudo-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .form__submit {
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
+}
