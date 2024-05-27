@@ -2,11 +2,11 @@ import Link from 'next/link'
 
 const ROUTE = [
   {
-    path: '/basics',
+    path: '/basics', // show the basic usage of framer motion, including the 'animate' and the 'transition' property
     label: 'Basics',
   },
   {
-    path: '/keyframes',
+    path: '/keyframes', // we can set keyframes in framer motion, just like those in css animations
     label: 'Keyframes',
   },
   {
@@ -18,17 +18,17 @@ const ROUTE = [
     label: 'Layout',
   },
   {
-    path: '/layout/modal',
+    path: '/modal',
     label: 'Modal',
   },
   {
     path: '/subscribe-button',
     label: 'Subscribe Button',
   },
-  {
-    path: '/dynamic-height',
-    label: 'Dynamic Height',
-  },
+  // {
+  //   path: '/dynamic-height',
+  //   label: 'Dynamic Height',
+  // },
   {
     path: '/feedback',
     label: 'Feedback',
@@ -38,7 +38,6 @@ const ROUTE = [
 export default function Home() {
   return (
     <main>
-      <h1>Welcome!</h1>
       <ul className='demo__list'>
         {ROUTE.map((route) => (
           <li key={route.path} className='demo__item'>

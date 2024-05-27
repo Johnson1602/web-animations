@@ -42,7 +42,11 @@ export default function Example() {
           onClick={() => setOpen(!open)}
           style={
             open
-              ? { position: 'fixed', inset: 0, top: 'var(--header-height)' }
+              ? {
+                  position: 'fixed',
+                  inset: 0,
+                  top: 'var(--header-height)',
+                }
               : { height: 50, width: 50 }
           }
           layout
