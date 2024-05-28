@@ -28,6 +28,9 @@ export default function ModalPage() {
   return (
     <DemoWrapper className='game-panel'>
       <ul className='list'>
+        {/*
+          layoutId 关键在于：页面中有两个元素，Framer Motion 的工作是将它们连接起来
+        */}
         {GAMES.map((game) => (
           <motion.li
             layoutId={`card-${game.title}`}

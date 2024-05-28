@@ -8,6 +8,7 @@ import { ObjectValues } from '@/types'
 
 import './index.scss'
 
+/** 定义了按钮的过渡动画 */
 const VARIANTS = {
   VISIBLE: { opacity: 1, scale: 1 },
   HIDDEN_SMALL: { opacity: 0, scale: 0.5 },

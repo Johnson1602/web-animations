@@ -125,6 +125,7 @@ const BASIC_PAGES: DemoInfo[] = [
     description: [
       // `use layoutId to create magical transitions between different components, just like the 'Magic Move' in Apple Keynote`,
       '使用 layoutId 可以在不同组件之间创建过渡动画，类似 Apple Keynote 中的 “神奇移动” 效果',
+      '将一个元素移动到另一个位置',
     ],
     takeaways: [
       'layoutId property',
@@ -138,6 +139,7 @@ const BASIC_PAGES: DemoInfo[] = [
     description: [
       // 'use key to differentiate and animate between different components within the same parent component',
       '使用 key 来区分同一父组件中的子组件，并为它们添加动画',
+      '在不同元素之间切换',
     ],
     takeaways: ['key property', 'mode property', 'initial property'],
   },
