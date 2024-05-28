@@ -40,17 +40,17 @@
     background-color: #fff;
   }
 
+  .demo-button {
+    padding: 10px 20px;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border-radius: 5px;
+    user-select: none;
+  }
+
   .manuel-control__button {
     &:hover {
       background-color: var(--color-neutral-dark);
     }
-  }
-
-  .demo-button {
-    padding: 10px 20px;
-    color: #191919;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    user-select: none;
   }
 }
