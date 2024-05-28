@@ -81,7 +81,8 @@ const BASIC_PAGES: DemoInfo[] = [
     path: '/basics',
     title: 'Basics',
     description: [
-      `show the basic usage of framer motion, including the 'animate' and the 'transition' property`,
+      // `show the basic usage of framer motion, including the 'animate' and the 'transition' property`,
+      'Framer Motion 的基本使用方法，包括 animate 和 transition 属性',
     ],
     takeaways: ['animate property', 'transition property'],
   },
@@ -89,8 +90,10 @@ const BASIC_PAGES: DemoInfo[] = [
     path: '/keyframes',
     title: 'Keyframes',
     description: [
-      'we can set keyframes in framer motion, just like those in CSS animations',
-      'not commonly used, but still good to know',
+      // 'we can set keyframes in framer motion, just like those in CSS animations',
+      '在 Framer Motion 中，我们像在 CSS 动画中一样设置关键帧',
+      // 'not commonly used, but still good to know',
+      '不常用，了解一下即可',
     ],
     takeaways: ['keyframes'],
   },
@@ -98,8 +101,10 @@ const BASIC_PAGES: DemoInfo[] = [
     path: '/gestures',
     title: 'Gestures',
     description: [
-      `framer motion provides a lot of gesture events, like 'whileHover', 'whileTap', 'whileDrag', etc.`,
-      'we can use them to create interactive animations',
+      // `framer motion provides a lot of gesture events, like 'whileHover', 'whileTap', 'whileDrag', etc.`,
+      'Framer Motion 提供了很多 gesture 事件，如 whileHover、whileTap、whileDrag 等',
+      // 'we can use them to create interactive animations',
+      '实现与用户交互相关的效果',
     ],
     takeaways: ['gesture events'],
   },
@@ -107,8 +112,10 @@ const BASIC_PAGES: DemoInfo[] = [
     path: '/layout',
     title: 'Layout',
     description: [
-      'CSS layouts are difficult and expensive, framer motion makes animate layout properties much easier',
-      'one of the most powerful and magical features of framer motion',
+      // 'CSS layouts are difficult and expensive, framer motion makes animate layout properties much easier',
+      '有些属性难以、无法使用 CSS 进行动画，使用 Framer Motion 让布局动画变得更简单',
+      // 'one of the most powerful and magical features of framer motion',
+      'Framer Motion 最强大、最神奇的特性之一',
     ],
     takeaways: ['layout property', 'layoutId property'],
   },
@@ -116,7 +123,8 @@ const BASIC_PAGES: DemoInfo[] = [
     path: '/modal',
     title: 'Modal',
     description: [
-      `use layoutId to create magical transitions between different components, just like the 'Magic Move' in Apple Keynote`,
+      // `use layoutId to create magical transitions between different components, just like the 'Magic Move' in Apple Keynote`,
+      '使用 layoutId 可以在不同组件之间创建过渡动画，类似 Apple Keynote 中的 “神奇移动” 效果',
     ],
     takeaways: [
       'layoutId property',
@@ -128,7 +136,8 @@ const BASIC_PAGES: DemoInfo[] = [
     path: '/subscribe-button',
     title: 'Subscribe Button',
     description: [
-      'use key to differentiate and animate between different components within the same parent component',
+      // 'use key to differentiate and animate between different components within the same parent component',
+      '使用 key 来区分同一父组件中的子组件，并为它们添加动画',
     ],
     takeaways: ['key property', 'mode property', 'initial property'],
   },
