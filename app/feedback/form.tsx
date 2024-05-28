@@ -83,6 +83,7 @@ export function Form(props: FormProps): JSX.Element {
 
             <ActionButton
               className='form__submit'
+              theme='light'
               buttonState={formState}
               initialText='Submit'
               successText={`Got it, thanks! 📣`}

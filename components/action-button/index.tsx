@@ -29,6 +29,7 @@ interface ActionButtonProps {
   successText?: string
   errorText?: string
   className?: string
+  theme?: 'light' | 'dark'
   onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
@@ -39,13 +40,14 @@ export function ActionButton(props: ActionButtonProps): JSX.Element {
     successText,
     errorText,
     className,
+    theme = 'dark',
     onClick,
   } = props
 
   const BUTTON_CONTENT: Record<ButtonState, string | React.ReactNode> = {
     [BUTTON_STATE.IDLE]: initialText,
     [BUTTON_STATE.LOADING]: (
-      <Spinner size={18} color='var(--color-secondary)' />
+      <Spinner size={18} theme={theme === 'dark' ? 'light' : 'dark'} />
     ),
     [BUTTON_STATE.SUCCESS]: successText || 'Success',
     [BUTTON_STATE.ERROR]: errorText || 'Error',
@@ -54,6 +56,7 @@ export function ActionButton(props: ActionButtonProps): JSX.Element {
   return (
     <button
       className={classNames('action-button', {
+        [`action-button--${theme}`]: !!theme,
         [`${className}`]: !!className,
       })}
       onClick={onClick}
