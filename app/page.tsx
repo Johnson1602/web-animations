@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import Feedback from './feedback/page'
+import Registration from './registration/page'
 
 import './index.scss'
 
@@ -20,19 +21,10 @@ export default function HomePage() {
         <div className='home__section'>
           <h2 className='section__title'>To The Real-world</h2>
 
-          <div className='demo__item-with-preview'>
-            <div className='demo__item'>
-              <Link href={FINAL_PROJECT[0].path} className='demo__link'>
-                {FINAL_PROJECT[0].title}
-              </Link>
-              <div className='demo__header'>
-                <h3 className='demo__title'>{FINAL_PROJECT[0].title}</h3>
-              </div>
-            </div>
-
-            <div className='demo__preview'>
-              <Feedback />
-            </div>
+          <div className='demo__grid demo__grid--single'>
+            {PROJECT_PAGES.map((item) => (
+              <DemoItemWithPreview key={item.path} demoInfo={item} />
+            ))}
           </div>
         </div>
       </div>
@@ -43,15 +35,19 @@ export default function HomePage() {
 interface DemoInfo {
   path: string
   title: string
-  description: string[]
-  takeaways: string[]
+  description?: string[]
+  takeaways?: string[]
 }
 
-interface DemoItemProps {
-  demoInfo: DemoInfo
+interface DemoWithPreviewInfo extends DemoInfo {
+  preview: JSX.Element
 }
 
-function DemoItem(props: DemoItemProps): JSX.Element {
+interface DemoItemProps<T> {
+  demoInfo: T
+}
+
+function DemoItem(props: DemoItemProps<DemoInfo>): JSX.Element {
   const { demoInfo } = props
 
   return (
@@ -65,13 +61,34 @@ function DemoItem(props: DemoItemProps): JSX.Element {
       </div>
 
       <div className='demo__detail'>
-        {demoInfo.description.map((item, index) => (
+        {Array.from(demoInfo.description || []).map((item, index) => (
           <div key={index} className='demo__description'>
             <span>•</span>
             <p>{item}</p>
           </div>
         ))}
       </div>
+    </div>
+  )
+}
+
+function DemoItemWithPreview(
+  props: DemoItemProps<DemoWithPreviewInfo>
+): JSX.Element {
+  const { demoInfo } = props
+
+  return (
+    <div className='demo__item-with-preview'>
+      <div className='demo__item'>
+        <Link href={demoInfo.path} className='demo__link'>
+          {demoInfo.title}
+        </Link>
+        <div className='demo__header'>
+          <h3 className='demo__title'>{demoInfo.title}</h3>
+        </div>
+      </div>
+
+      <div className='demo__preview'>{demoInfo.preview}</div>
     </div>
   )
 }
@@ -149,10 +166,16 @@ const BASIC_PAGES: DemoInfo[] = [
   // },
 ]
 
-const FINAL_PROJECT = [
+const PROJECT_PAGES: DemoWithPreviewInfo[] = [
   // final project, lets see how we can use framer motion to create an real-world animation that improves user experience and sparks joy
   {
     path: '/feedback',
     title: 'Feedback',
+    preview: <Feedback />,
+  },
+  {
+    path: '/registration',
+    title: 'Multi-step Registration Form',
+    preview: <Registration />,
   },
 ]

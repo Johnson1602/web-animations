@@ -24,6 +24,10 @@
     display: grid;
     grid-template-columns: repeat(var(--demo-grid-columns), minmax(0, 1fr));
     gap: 24px;
+
+    &--single {
+      --demo-grid-columns: 1;
+    }
   }
 
   .demo__item-with-preview {
@@ -97,6 +101,10 @@
   .page-home {
     .demo__grid {
       --demo-grid-columns: 1;
+
+      &--single {
+        --demo-grid-columns: 1;
+      }
     }
 
     .demo__item-with-preview {
@@ -110,6 +118,10 @@
   .page-home {
     .demo__grid {
       --demo-grid-columns: 2;
+
+      &--single {
+        --demo-grid-columns: 1;
+      }
     }
   }
 }
